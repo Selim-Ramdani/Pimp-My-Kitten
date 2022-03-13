@@ -10,6 +10,9 @@
   </head>
 
   <body>
+  <% if current_user %>
+    <p>Vous êtes bien connecté !</p>
+  <% end %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
