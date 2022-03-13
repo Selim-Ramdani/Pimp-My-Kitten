@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :addresses
-  devise_for :users
   root 'home#index'
   get '/secret', to: 'home#secret'
+
+  devise_for :users
+  resources :products
+  resources :addresses
 end
