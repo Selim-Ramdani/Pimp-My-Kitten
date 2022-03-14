@@ -12,6 +12,5 @@ class UserMailer < ApplicationMailer
   
   
       mail(to: @user.email, subject: 'Bienvenue sur Pimp My Kitten !')
-    end
   end
 end
