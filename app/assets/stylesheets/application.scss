@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+.div-links{
+  letter-spacing: 3px;
+  padding-bottom: 40px;
+}
+
+.navbar{
+  margin-top: 0;
+  width: 100%;
+  height: 40%;
+}
+
+h1{
+   padding-bottom: 40px;
+  text-align: center;
+  font-weight: bold;
+  font-family: poppins;
+}
