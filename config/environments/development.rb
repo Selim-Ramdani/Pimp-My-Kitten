@@ -37,7 +37,7 @@ Rails.application.configure do
   
   #devise =>
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_url_options = { host: 'pimp-my-kitten.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'pet-now-staging.herokuapp.com' }
 
 
 
