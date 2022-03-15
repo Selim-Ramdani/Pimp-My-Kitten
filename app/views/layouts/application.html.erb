@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PimpMyKitten</title>
+    <title>Pet Now</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <!-- Policy -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +24,9 @@
 
   <%= render 'layouts/shared/navbar' %>
 
-    <%= yield %>
 
+    <%= yield %>
+<%= render 'layouts/shared/footer' %>
   </body>
+
 </html>
