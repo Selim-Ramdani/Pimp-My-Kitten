@@ -35,10 +35,9 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
   
   
-  #config letter_opener and devise =>
-  config.action_mailer.delivery_method = :letter_opener
+  #devise =>
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'pimp-my-kitten.herokuapp.com' }
 
 
 
