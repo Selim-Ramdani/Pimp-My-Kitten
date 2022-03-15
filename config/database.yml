@@ -83,3 +83,9 @@ production:
   database: PimpMyKitten_production
   username: PimpMyKitten
   password: <%= ENV['PIMPMYKITTEN_DATABASE_PASSWORD'] %>
+
+staging:
+  <<: *default
+  database: PimpMyKitten_staging
+  username: PimpMyKitten
+  password: <%= ENV['PIMPMYKITTEN_DATABASE_PASSWORD'] %>
