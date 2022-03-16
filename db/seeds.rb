@@ -12,6 +12,7 @@ Cart.destroy_all
 Item.destroy_all
 Product.destroy_all
 User.destroy_all
+AdminUser.destroy_all
 
 
 User.create(
@@ -57,6 +58,7 @@ end
   )
 end
 
+
 10.times do |i|
   Order.create(
      product_id: Product.all.sample.id,
@@ -64,14 +66,4 @@ end
   )
 end
 
-
-10.times do |i|
-  Address.create(
-    # user_id: User.all.sample.id,
-    street_number: Faker::Address.building_number,
-    street_name: Faker::Address.street_name,
-    zipcode: Faker::Address.zip_code,
-    city: Faker::Address.city,
-    country: Faker::Address.country
-  )
-end
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
