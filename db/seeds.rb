@@ -8,8 +8,8 @@
 
 
 Address.destroy_all
-Cart.destroy_all
-Item.destroy_all
+#Cart.destroy_all
+#Item.destroy_all
 Product.destroy_all
 User.destroy_all
 AdminUser.destroy_all
@@ -30,7 +30,7 @@ AdminUser.destroy_all
   User.create(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
-    email: 'user-mail' + '@yopmail.com',
+    email: 'user-mail' + "#{i}" + '@yopmail.com',
     password: 'password'+"#{i}",
     password_confirmation: 'password'+"#{i}"
   )
@@ -43,20 +43,20 @@ end
   )
 end
 
-10.times do 
-  Cart.create(
-    user_id: User.all.sample.id
-  )
-end
+# 10.times do 
+#   Cart.create(
+#     user_id: User.all.sample.id
+#   )
+# end
 
 
-10.times do |i|
-  Item.create(
-     product_id: Product.all.sample.id,
-    cart_id: Cart.all.sample.id,
-    quantity: rand(10...250)
-  )
-end
+# 10.times do |i|
+#   Item.create(
+#      product_id: Product.all.sample.id,
+#     cart_id: Cart.all.sample.id,
+#     quantity: rand(10...250)
+#   )
+# end
 
 
 10.times do |i|
@@ -66,4 +66,4 @@ end
   )
 end
 
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+AdminUser.create!(email: 'admin@example.com', password: 'Adrakk124*/*', password_confirmation: 'Adrakk124*/*') if Rails.env.development?
