@@ -13,6 +13,18 @@ Item.destroy_all
 Product.destroy_all
 User.destroy_all
 
+
+User.create(
+  first_name: "margot",
+  last_name: "margot",
+  email: 'margot@yopmail.com',
+  password: 'margot',
+  password_confirmation: 'margot'
+)
+end
+
+
+
 10.times do |i|
   User.create(
     first_name: Faker::Name.first_name,
@@ -32,7 +44,7 @@ end
 
 10.times do 
   Cart.create(
-    user_id: User.all.sample..id,
+    user_id: User.all.sample.id
   )
 end
 
@@ -40,11 +52,17 @@ end
 10.times do |i|
   Item.create(
      product_id: Product.all.sample.id,
-    cart_id: Card.all.sample.id,
+    cart_id: Cart.all.sample.id,
     quantity: rand(10...250)
   )
 end
 
+10.times do |i|
+  Order.create(
+     product_id: Product.all.sample.id,
+     user_id: User.all.sample.id
+  )
+end
 
 
 10.times do |i|
