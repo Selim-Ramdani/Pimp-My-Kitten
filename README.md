@@ -1,24 +1,23 @@
-# README
+# prochain merge attendus :
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+[x]ajout seed 
+[ ] front de Ilyes et Wallid
+[ ] admin
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+# rappelle git 
+git branch -a
+git pull [branchedistante] [branchelocale]
+git pull v0_project seed
 
-* Database creation
 
-* Database initialization
+ou 
+git fetch v0_project seed   (tout c'est bien passé ? alors on merge ! )
+git merge v0_project seed
+## pour lancer
+bundle install
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+rails server (ecoute sur le port 3000)
+rails server -p 3001 (ecoute sur le port 3001)
