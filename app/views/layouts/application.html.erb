@@ -19,8 +19,10 @@
 
     <%= stylesheet_link_tag'bootstrap', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag'bootstrap', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     
     <script src="https://js.stripe.com/v3/"></script>
+
 
     </head>
 
@@ -28,7 +30,9 @@
 
   <%= render 'layouts/shared/navbar' %>
 
+
     <%= yield %>
+    <%= render 'layouts/shared/footer' %>
 
   </body>
 </html>
