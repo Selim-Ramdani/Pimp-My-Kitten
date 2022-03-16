@@ -14,13 +14,25 @@ Product.destroy_all
 User.destroy_all
 AdminUser.destroy_all
 
+
+# User.create(
+#   first_name: "margot",
+#   last_name: "margot",
+#   email: 'margot@yopmail.com',
+#   password: 'margot',
+#   password_confirmation: 'margot'
+# )
+# end
+
+
+
 10.times do |i|
   User.create(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     email: 'user-mail' + '@yopmail.com',
-    password: 'password',
-    password_confirmation: 'password'
+    password: 'password'+"#{i}",
+    password_confirmation: 'password'+"#{i}"
   )
 end
 10.times do 
@@ -45,6 +57,7 @@ end
     quantity: rand(10...250)
   )
 end
+
 
 10.times do |i|
   Order.create(
