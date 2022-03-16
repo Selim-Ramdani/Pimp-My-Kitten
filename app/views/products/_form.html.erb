@@ -1,37 +1,45 @@
-<%= form_with(model: product, local: true) do |form| %>
-  <% if product.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+<link type="text/css" rel="stylesheet" href="/assets/stylesheets/application.scss">
 
-      <ul>
-      <% product.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+
+<div class='forms'>
+
+  <%= form_with(model: product, local: true) do |form| %>
+
+    <% if product.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+        <ul>
+        <% product.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :title %></br>
+      <%= form.text_field :title, required: true %>
+    </div></br>
+
+    <div class="field">
+      <%= form.label :image %></br>
+      <%= form.file_field :image, accept: "image/jpeg, image/gif, image/png" %>
+    </div></br>
+
+    <div class="field">
+      <%= form.label :description %></br>
+      <%= form.text_area :description, required: true %>
+    </div></br>
+
+    <div class="field">
+      <%= form.label :price %></br>
+      <%= form.number_field :price, required: true, min: 1 %>
+    </div></br>
+
+    <div class="actions"></br></br>
+      <%= form.submit %>
+    </div></br>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, required: true %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image, accept: "image/jpeg, image/gif, image/png" %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, required: true %>
-  </div>
-
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price, required: true, min: 1 %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
