@@ -12,7 +12,7 @@ Cart.destroy_all
 Item.destroy_all
 Product.destroy_all
 User.destroy_all
-
+AdminUser.destroy_all
 10.times do |i|
   User.create(
     first_name: Faker::Name.first_name,
@@ -57,3 +57,4 @@ end
     country: Faker::Address.country
   )
 end
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
