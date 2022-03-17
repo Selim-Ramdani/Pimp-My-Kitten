@@ -7,13 +7,23 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+
+Order.destroy_all
+Item.destroy_all
+Cart.destroy_all
+Address.destroy_all
+Product.destroy_all
+User.destroy_all
+AdminUser.destroy_all
+
+
 10.times do |i|
   User.create(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
-    email: 'user-mail' + '@yopmail.com',
-    password: 'password',
-    password_confirmation: 'password'
+    email: 'user-mail' + "#{i}" + '@yopmail.com',
+    password: 'password'+"#{i}",
+    password_confirmation: 'password'+"#{i}"
   )
 end
 10.times do 
@@ -39,8 +49,9 @@ end
   )
 end
 
+
 10.times do |i|
-  Order.create(
+  Order.create!(
      product_id: Product.all.sample.id,
      user_id: User.all.sample.id
   )
@@ -58,4 +69,5 @@ end
   )
 end
 
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+AdminUser.create!(email: 'admin@example.com', password: 'Adrakk124*/*', password_confirmation: 'Adrakk124*/*') if Rails.env.development?
+
