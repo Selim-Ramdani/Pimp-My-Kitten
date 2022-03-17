@@ -17,11 +17,6 @@
   <%= @cart.total %>
 </p>
 
-<% if @cart.total.to_d > 1 %>
-    <%= link_to "Passer commande (LEGACY)", new_payment_path(total: @cart.total), class:"btn btn-primary" %>
-    <%= button_to "Passer commande (NEXT GEN)", checkout_create_path(total: @cart.total), class: "btn btn-primary" %>
-<% end %>
-
 <%= link_to 'Edit', edit_cart_path(@cart) %> |
 
 <%= link_to 'Back', carts_path %>
