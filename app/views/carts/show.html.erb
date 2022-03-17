@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @cart.user_id %>
+</p>
+
+<ul>
+  <strong>Liste de nos produits</strong>
+  <% @cart.items.each do |item| %>
+    <li><%= item.product.title %> (x <%= item.quantity %>) : <%= item.total %></li>
+  <% end %>
+</ul>
+
+<p>
+  <strong>Total:</strong>
+  <%= @cart.total %>
+</p>
+
+<%= link_to 'Edit', edit_cart_path(@cart) %> |
+
+<%= link_to 'Back', carts_path %>
