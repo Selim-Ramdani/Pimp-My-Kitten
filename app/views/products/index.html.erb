@@ -18,6 +18,7 @@
 		      <th scope="col">Edit</th>
 		      <th scope="col">Add to cart</th>
 		    </tr>
+        
 		  </thead>
 		  <tbody>
         <% @products.each do |product| %>
@@ -32,14 +33,11 @@
 
            <td><%= link_to 'Show', product %></td>
            <td><%= link_to 'Edit', edit_product_path(product) %></td>
-           <td><%= link_to 'Add to cart' %></td>
-
-
+           <td><%= link_to 'Add to basket', new_cart_path %></td>
 
 		    </tr>
         <% end %>
-		    <tr>
-
+		
 		  </tbody>
 		</table>
 
