@@ -1,5 +1,30 @@
+<link type="text/css" rel="stylesheet" href="/app/assets/stylesheets/carts.scss">
+
 <h1>New Cart</h1>
+
+<div class="container">
 
 <%= render 'form', cart: @cart %>
 
 <%= link_to 'Back', carts_path %>
+
+<p id="notice"><%= notice %></p>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+		  <table class="table table-image">
+		    <thead>
+		      <tr>
+
+		        <th scope="col">Picture</th>
+		        <th scope="col">Title</th>
+		        <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+		      </tr>
+        </thead>
+		  </table>
+    </div>
+  </div>
+</div> 

@@ -13,4 +13,9 @@ class UserMailer < ApplicationMailer
   
       mail(to: @user.email, subject: 'Bienvenue sur Pimp My Kitten !')
   end
+
+  def order_user_mailer(user, order)
+    mail(to: @user.email, subject: 'Confirmation de votre commande')
+  end
+
 end
