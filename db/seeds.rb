@@ -59,7 +59,7 @@ end
 
 
 10.times do |i|
-  Order.create(
+  Order.create!(
      product_id: Product.all.sample.id,
      user_id: User.all.sample.id
   )
