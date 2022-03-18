@@ -12,7 +12,7 @@
   
 
 Where to find our application?
-You can find our application on Heroku:-> [HERE](https://pet-now.herokuapp.com)
+You can find our application on Heroku:-> [HERE](pet-now-staging.herokuapp.com)
 
 ## 🛠️ Installation Steps
 ## How to use the app?
