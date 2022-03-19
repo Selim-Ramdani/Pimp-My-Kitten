@@ -13,6 +13,7 @@ class CartsController < ApplicationController
   # GET /carts/new
   def new
     @cart = Cart.new
+    
   end
 
   # GET /carts/1/edit
@@ -21,7 +22,23 @@ class CartsController < ApplicationController
 
   # POST /carts or /carts.json
   def create
-    @cart = Cart.new(cart_params)
+   
+
+     puts "***********params [id]*********************"
+ 
+    @mon_mail =  params[:cart][:user_email]
+    @monuser = User.new
+
+    @monuser = User.find_by(email:  @mon_mail)
+    
+    @id_de_user = @monuser.id
+    @cart = Cart.new(@id_de_user)
+
+    # puts "*************avant*******************"
+   
+
+ 
+    
 
     respond_to do |format|
       if @cart.save
@@ -65,6 +82,10 @@ class CartsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def cart_params
-      params.require(:cart).permit(:user_id)
+      params.require(:cart).permit(:user_email)
     end
+
+
+
 end
+

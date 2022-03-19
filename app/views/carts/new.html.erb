@@ -4,8 +4,14 @@
 
 <div class="container">
 
+<script>
+console.log("Hello world!");
+</script>
+<%# <%= console.log(*****************) %>
+<%# <%= console.log(@cart.user_email) %> 
+<%# <%= console.log(*****************) %>  
 <%= render 'form', cart: @cart %>
-
+<!--  <%= render 'form', cart: @cart %> -->
 <%= link_to 'Back', carts_path %>
 
 <p id="notice"><%= notice %></p>
